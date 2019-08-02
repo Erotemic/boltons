@@ -572,11 +572,11 @@ def cachedmethod(cache, scoped=True, typed=False, key=None):
     >>> class Lowerer(object):
     ...     def __init__(self):
     ...         self.cache = LRI()
-    ...
+    ...     #
     ...     @cachedmethod('cache')
     ...     def lower(self, text):
     ...         return text.lower()
-    ...
+    ... #
     >>> lowerer = Lowerer()
     >>> lowerer.lower('WOW WHO COULD GUESS CACHING COULD BE SO NEAT')
     'wow who could guess caching could be so neat'

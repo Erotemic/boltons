@@ -476,7 +476,7 @@ def complement(wrapped):
     >>> class NamesFilter(object):
     ...    def __init__(self, allowed):
     ...        self._allowed = allowed
-    ...
+    ...    #
     ...    def filter(self, names):
     ...        return [name for name in names if name in self._allowed]
 
