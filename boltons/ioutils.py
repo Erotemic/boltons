@@ -208,8 +208,8 @@ class SpooledBytesIO(SpooledIOBase):
         >>> with ioutils.SpooledBytesIO() as f:
         ...     f.write(b"Happy IO")
         ...     _ = f.seek(0)
-        ...     print(isinstance(f.getvalue(), ioutils.binary_type))
-        'True'
+        ...     isinstance(f.getvalue(), ioutils.binary_type)
+        True
     """
 
     def read(self, n=-1):
@@ -291,8 +291,8 @@ class SpooledStringIO(SpooledIOBase):
         >>> with ioutils.SpooledStringIO() as f:
         ...     f.write(u"\u2014 Hey, an emdash!")
         ...     _ = f.seek(0)
-        ...     print(isinstance(f.read(), ioutils.text_type))
-        'True'
+        ...     isinstance(f.read(), ioutils.text_type)
+        True
 
     """
     def __init__(self, *args, **kwargs):
